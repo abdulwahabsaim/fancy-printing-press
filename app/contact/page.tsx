@@ -73,16 +73,16 @@ export default function ContactPage() {
 
               {/* Right Column: Map with CORRECTED URL */}
               <div className="w-full h-[400px] lg:h-full min-h-[400px] rounded-lg overflow-hidden shadow-lg border">
-                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1510.4053798250359!2d74.12394358252588!3d32.246878307529535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1756185232100!5m2!1sen!2s"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Fancy Printing Press Location - Bank More Near TCS Office, Gujranwala Cantt"
-                  ></iframe>
+              <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.936990646153!2d74.1215438758117!3d32.2468759738096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391f24771492066d%3A0x6f6b5535c5c99946!2sTCS%20-%20Express%20Center%20Cantt!5e0!3m2!1sen!2s!4v1717352458461!5m2!1sen!2s"
+    width="100%"
+    height="100%"
+    style={{ border: 0 }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+    title="Fancy Printing Press Location"
+  ></iframe>
               </div>
             </div>
           </div>
