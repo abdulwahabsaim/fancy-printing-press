@@ -1,135 +1,41 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@custom-variant dark (&:is(.dark *));
-
-:root {
-  /* Updated design tokens for Fancy Printing Press */
-  --background: #ffffff;
-  --foreground: #374151;
-  --card: #f0f4f8;
-  --card-foreground: #003366;
-  --popover: #ffffff;
-  --popover-foreground: #003366;
-  --primary: #003366;
-  --primary-foreground: #ffffff;
-  --secondary: #00bcd4;
-  --secondary-foreground: #ffffff;
-  --muted: #f0f4f8;
-  --muted-foreground: #374151;
-  --accent: #ff5722;
-  --accent-foreground: #ffffff;
-  --destructive: #ff5252;
-  --destructive-foreground: #ffffff;
-  --border: #d1d5db;
-  --input: #f0f4f8;
-  --ring: rgba(0, 188, 212, 0.5);
-  --chart-1: #003366;
-  --chart-2: #00bcd4;
-  --chart-3: #ff5722;
-  --chart-4: #ffeb3b;
-  --chart-5: #4caf50;
-  --radius: 0.5rem;
-  --sidebar: #ffffff;
-  --sidebar-foreground: #003366;
-  --sidebar-primary: #f0f4f8;
-  --sidebar-primary-foreground: #003366;
-  --sidebar-accent: #00bcd4;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #d1d5db;
-  --sidebar-ring: rgba(0, 188, 212, 0.5);
-}
-
-.dark {
-  --background: #1a202c;
-  --foreground: #f7fafc;
-  --card: #2d3748;
-  --card-foreground: #f7fafc;
-  --popover: #2d3748;
-  --popover-foreground: #f7fafc;
-  --primary: #00bcd4;
-  --primary-foreground: #1a202c;
-  --secondary: #4a5568;
-  --secondary-foreground: #f7fafc;
-  --muted: #4a5568;
-  --muted-foreground: #a0aec0;
-  --accent: #ff5722;
-  --accent-foreground: #ffffff;
-  --destructive: #ff5252;
-  --destructive-foreground: #ffffff;
-  --border: #4a5568;
-  --input: #4a5568;
-  --ring: rgba(0, 188, 212, 0.5);
-  --chart-1: #00bcd4;
-  --chart-2: #ff5722;
-  --chart-3: #ffeb3b;
-  --chart-4: #4caf50;
-  --chart-5: #9c27b0;
-  --sidebar: #2d3748;
-  --sidebar-foreground: #f7fafc;
-  --sidebar-primary: #00bcd4;
-  --sidebar-primary-foreground: #1a202c;
-  --sidebar-accent: #4a5568;
-  --sidebar-accent-foreground: #f7fafc;
-  --sidebar-border: #4a5568;
-  --sidebar-ring: rgba(0, 188, 212, 0.5);
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-destructive: var(--destructive);
-  --color-destructive-foreground: var(--destructive-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
-
-  --font-sans: var(--font-geist);
-  --font-serif: var(--font-manrope);
+@layer base {
+  :root {
+    /* The Original, Polished Color Palette */
+    --background: 255 100% 100%;
+    --foreground: 221 14% 28%; /* #374151 */
+    --card: 255 100% 100%;
+    --card-foreground: 210 100% 20%; /* #003366 */
+    --popover: 255 100% 100%;
+    --popover-foreground: 210 100% 20%;
+    --primary: 210 100% 20%; /* #003366 */
+    --primary-foreground: 255 100% 100%;
+    --secondary: 186 100% 42%; /* #00BCD4 */
+    --secondary-foreground: 255 100% 100%;
+    --muted: 220 18% 95%; /* #f0f4f8 */
+    --muted-foreground: 221 14% 28%;
+    --accent: 14 100% 57%; /* #ff5722 */
+    --accent-foreground: 255 100% 100%;
+    --destructive: 0 91% 63%; /* #ff5252 */
+    --destructive-foreground: 255 100% 100%;
+    --border: 215 20% 82%; /* #d1d5db */
+    --input: 220 18% 95%;
+    --ring: 186 100% 42%;
+    --radius: 0.5rem;
+  }
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
   }
   body {
     @apply bg-background text-foreground font-serif;
   }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, h2, h3, h4, h5, h6 {
     @apply font-sans;
   }
 }

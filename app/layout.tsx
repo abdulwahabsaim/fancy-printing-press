@@ -1,34 +1,30 @@
-import type React from "react"
-import { Geist, Manrope } from "next/font/google"
-import "./globals.css"
+import type { Metadata } from "next";
+import { GeistSans } from "geist/font/sans"; // Correct way to import Geist Sans
+import { Manrope } from "next/font/google";
+import "./globals.css";
+import { cn } from "@/lib/utils";
 
-const geist = Geist({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-geist",
-})
-
+// The Manrope font is initialized as a function
 const manrope = Manrope({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-manrope",
-})
+});
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Fancy Printing Press - Quality Printing, Professional Results",
-  description:
-    "Premium printing services in Gujranwala. From business cards to large-format banners, we are your trusted printing partner.",
-    generator: 'v0.app'
-}
+  description: "Premium printing services in Gujranwala. From business cards to large-format banners, we are your trusted printing partner.",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${geist.variable} ${manrope.variable} antialiased`}>
+    // The Geist font is used as a className directly from the import
+    <html lang="en" className={`${GeistSans.variable} ${manrope.variable}`} suppressHydrationWarning>
       <body>{children}</body>
     </html>
-  )
+  );
 }

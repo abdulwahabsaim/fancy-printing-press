@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Award, Users, Clock, Target, MessageCircle } from "lucide-react"
+import { Award, Users, Clock, Target, MessageSquare } from "lucide-react"
 import Link from "next/link"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
@@ -133,7 +133,7 @@ export default function AboutPage() {
                 </p>
                 <Button variant="outline" asChild>
                   <Link href="https://wa.me/923006484741?text=Hello%20Mr.%20Nadeem,%20I'm%20interested%20in%20your%20services.">
-                    <MessageCircle className="w-4 h-4 mr-2" />
+                    <MessageSquare className="w-4 h-4 mr-2" />
                     Contact on WhatsApp
                   </Link>
                 </Button>
@@ -152,7 +152,7 @@ export default function AboutPage() {
                 </p>
                 <Button variant="outline" asChild>
                   <Link href="https://wa.me/923041568682?text=Hello%20Mr.%20Jazib,%20I'm%20interested%20in%20your%20services.">
-                    <MessageCircle className="w-4 h-4 mr-2" />
+                    <MessageSquare className="w-4 h-4 mr-2" />
                     Contact on WhatsApp
                   </Link>
                 </Button>
@@ -162,21 +162,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-sans font-bold text-3xl md:text-4xl mb-4">Ready to Work With Us?</h2>
-          <p className="text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
-            Experience the difference that 20+ years of expertise can make for your printing needs.
-          </p>
-          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-4" asChild>
-            <Link href="https://wa.me/923006484741?text=Hello%20FPP,%20I'm%20interested%20in%20your%20services.">
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Start Your Project Today
-            </Link>
-          </Button>
-        </div>
-      </section>
 
       <Footer />
       <WhatsAppFloat />
