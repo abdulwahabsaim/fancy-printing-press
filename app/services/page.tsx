@@ -14,7 +14,7 @@ export default function ServicesPage() {
       <Header />
 
       {/* Compact Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary via-primary/95 to-secondary text-primary-foreground py-12 lg:py-16 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-primary via-primary/95 to-secondary text-primary-foreground py-16 lg:py-20 overflow-hidden">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-10 left-10 w-24 h-24 bg-secondary rounded-full blur-3xl"></div>
@@ -54,7 +54,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Enhanced Services Grid Section */}
-      <section className="py-24 bg-gradient-to-b from-muted/30 to-background">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {services.map((category) => (

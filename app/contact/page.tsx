@@ -12,20 +12,20 @@ export default function ContactPage() {
       <Header />
       <main className="flex-grow">
         {/* Contact Section */}
-        <section className="py-24">
+        <section className="py-16 md:py-24">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-4">Contact Us</h1>
+            <div className="text-center mb-12 md:mb-16">
+              <h1 className="font-sans font-bold text-4xl md:text-5xl lg:text-6xl mb-4">Contact Us</h1>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                 Have a question or ready to start a project? We&apos;d love to hear from you. Reach out via WhatsApp for the fastest response.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
               {/* Left Column: Contact Info */}
               <div className="space-y-12">
                 <div>
-                  <h2 className="font-heading text-2xl font-semibold mb-6">Contact Information</h2>
+                  <h2 className="font-sans text-2xl md:text-3xl font-semibold mb-6">Contact Information</h2>
                   <div className="space-y-6">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -59,7 +59,7 @@ export default function ContactPage() {
                 </div>
                 
                 <div className="bg-primary text-primary-foreground p-8 rounded-lg shadow-lg">
-                  <h3 className="font-heading text-2xl font-semibold text-white mb-4">Fastest Way to Connect</h3>
+                  <h3 className="font-sans text-xl md:text-2xl font-semibold text-white mb-4">Fastest Way to Connect</h3>
                   <p className="text-primary-foreground/80 mb-6">
                     For instant quotes, project discussions, and expert advice, chat with us directly on WhatsApp. We&apos;re available 24/7 for emergency orders.
                   </p>
@@ -72,7 +72,7 @@ export default function ContactPage() {
               </div>
 
               {/* Right Column: Map with CORRECTED URL */}
-              <div className="w-full h-[400px] lg:h-full min-h-[400px] rounded-lg overflow-hidden shadow-lg border">
+              <div className="w-full h-[400px] lg:h-full min-h-[400px] rounded-lg overflow-hidden shadow-lg border mt-8 lg:mt-0">
               <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3392.936990646153!2d74.1215438758117!3d32.2468759738096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391f24771492066d%3A0x6f6b5535c5c99946!2sTCS%20-%20Express%20Center%20Cantt!5e0!3m2!1sen!2s!4v1717352458461!5m2!1sen!2s"
     width="100%"

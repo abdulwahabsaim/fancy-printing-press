@@ -20,7 +20,7 @@ export default function HomePage() {
       <Header />
       <main>
         {/* Hero Section - 70% screen height */}
-        <section className="relative bg-gradient-to-br from-primary via-primary/90 to-primary/80 text-primary-foreground h-[70vh] flex items-center py-8 lg:py-12">
+        <section className="relative bg-gradient-to-br from-primary via-primary/90 to-primary/80 text-primary-foreground min-h-[70vh] flex items-center py-12 lg:py-16">
           <div className="absolute inset-0 bg-black/10"></div>
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-20 left-10 w-32 h-32 bg-secondary rounded-full blur-3xl"></div>
@@ -34,7 +34,7 @@ export default function HomePage() {
                   <Star className="w-3 h-3 mr-1.5" />
                   20+ Years of Excellence in Printing
                 </div>
-                <h1 className="font-sans font-bold text-2xl md:text-4xl lg:text-5xl leading-tight text-white">
+                <h1 className="font-sans font-bold text-3xl md:text-4xl lg:text-5xl leading-tight text-white">
                   Premium Printing
                   <br />
                   <span className="text-secondary">Solutions</span>
@@ -72,15 +72,15 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <div className="relative">
+              <div className="relative mt-8 lg:mt-0">
                 <div className="relative z-10">
-                  <Image src="/professional-printing-showcase-with-business-cards.png" alt="Professional Printing Showcase" width={600} height={450} className="w-full h-auto max-h-[320px] object-cover rounded-2xl shadow-2xl" priority />
+                  <Image src="/professional-printing-showcase-with-business-cards.png" alt="Professional Printing Showcase" width={600} height={450} className="w-full h-auto max-h-[280px] sm:max-h-[350px] object-cover rounded-2xl shadow-2xl" priority />
                 </div>
                 {/* Floating visual elements - positioned outside the image with higher z-index */}
-                <div className="absolute -top-3 -right-3 w-20 h-20 bg-secondary/20 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-lg z-20">
+                <div className="absolute -top-2 -right-2 md:-top-3 md:-right-3 w-20 h-20 bg-secondary/20 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-lg z-20">
                   <CheckCircle className="w-10 h-10 text-secondary" />
                 </div>
-                <div className="absolute -bottom-3 -left-3 w-28 h-20 bg-accent/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl z-20 border border-accent/30">
+                <div className="absolute -bottom-2 -left-2 md:-bottom-3 md:-left-3 w-28 h-20 bg-accent/90 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-xl z-20 border border-accent/30">
                   <div className="text-center">
                     <div className="text-lg font-bold text-white">24/7</div>
                     <div className="text-xs text-white/90 font-medium">Support</div>
@@ -92,9 +92,9 @@ export default function HomePage() {
         </section>
 
         {/* Modern Services Section */}
-        <section id="services" className="py-20 bg-gradient-to-b from-muted/30 to-background">
+        <section id="services" className="py-16 md:py-20 bg-gradient-to-b from-muted/30 to-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
+            <div className="text-center mb-12 md:mb-16">
               <h2 className="font-sans font-bold text-3xl md:text-4xl lg:text-5xl text-primary mb-4">Our Core Services</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Comprehensive printing solutions tailored to meet all your business and personal needs.
@@ -102,7 +102,7 @@ export default function HomePage() {
             </div>
             
             {/* Featured Services Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 md:mb-16">
               {services.slice(0, 2).map((service) => (
                 <div key={service.slug} className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/5 to-secondary/5 border border-border/20 hover:border-primary/30 transition-all duration-500 hover:shadow-2xl">
                   <div className="flex flex-col lg:flex-row h-full">
@@ -116,12 +116,12 @@ export default function HomePage() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </div>
-                    <div className="lg:w-1/2 p-8 flex flex-col justify-center">
+                    <div className="lg:w-1/2 p-6 md:p-8 flex flex-col justify-center">
                       <div className="flex items-center mb-4">
                         <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center mr-4 group-hover:bg-primary/20 transition-colors">
                           <service.icon className="w-6 h-6 text-primary" />
                         </div>
-                        <h3 className="font-sans font-bold text-2xl text-primary">{service.title}</h3>
+                        <h3 className="font-sans font-bold text-xl md:text-2xl text-primary">{service.title}</h3>
                       </div>
                       <p className="text-muted-foreground text-base leading-relaxed mb-6">{service.shortDescription}</p>
                       <Button asChild className="w-fit bg-primary hover:bg-primary/90 text-primary-foreground group-hover:shadow-lg transition-all">
@@ -154,7 +154,7 @@ export default function HomePage() {
               ))}
             </div>
 
-            <div className="text-center mt-16">
+            <div className="text-center mt-12 md:mt-16">
               <div className="inline-flex flex-col items-center">
                 <Button size="lg" asChild className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-white text-lg px-12 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-0">
                   <Link href="/services" className="flex items-center">
@@ -167,16 +167,15 @@ export default function HomePage() {
                     </svg>
                   </Link>
                 </Button>
-                {/* <p className="text-muted-foreground text-sm mt-3">Discover our complete range of printing solutions</p> */}
               </div>
             </div>
           </div>
         </section>
 
         {/* Why Choose Us Section */}
-        <section className="py-20 bg-gradient-to-br from-muted/20 via-background to-muted/10">
+        <section className="py-16 md:py-20 bg-gradient-to-br from-muted/20 via-background to-muted/10">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
+            <div className="text-center mb-12 md:mb-16">
               <h2 className="font-sans font-bold text-3xl md:text-4xl lg:text-5xl text-primary mb-4">Why Choose Us?</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Discover what makes Fancy Printing Press the preferred choice for quality printing in Gujranwala.
@@ -184,7 +183,7 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="group text-center p-8 rounded-3xl bg-card border-2 border-border/20 hover:border-primary/40 hover:bg-card/80 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
+                <div key={index} className="group text-center p-6 md:p-8 rounded-3xl bg-card border-2 border-border/20 hover:border-primary/40 hover:bg-card/80 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl">
                   <div className="w-20 h-20 bg-gradient-to-br from-secondary/20 to-accent/20 rounded-3xl flex items-center justify-center mx-auto mb-6 group-hover:from-secondary/30 group-hover:to-accent/30 transition-all duration-500">
                     <benefit.icon className="w-10 h-10 text-secondary group-hover:scale-110 transition-transform duration-300" />
                   </div>
@@ -197,9 +196,9 @@ export default function HomePage() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 bg-gradient-to-b from-background to-muted/20">
+        <section className="py-16 md:py-20 bg-gradient-to-b from-background to-muted/20">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
+            <div className="text-center mb-12 md:mb-16">
               <h2 className="font-sans font-bold text-3xl md:text-4xl lg:text-5xl text-primary mb-4">What Our Clients Say</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Don't just take our word for it. Here's what our satisfied customers have to say about our services.

@@ -38,7 +38,7 @@ export default function AboutPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground py-20">
+      <section className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-sans font-bold text-4xl md:text-5xl lg:text-6xl mb-6">
             Our <span className="text-secondary">Story</span>
@@ -50,9 +50,9 @@ export default function AboutPage() {
       </section>
 
       {/* Company Story */}
-      <section className="py-20">
+      <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <div>
               <h2 className="font-sans font-bold text-3xl md:text-4xl text-primary mb-6">Founded on Excellence</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
@@ -72,7 +72,7 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="relative">
+            <div className="relative mt-8 lg:mt-0">
               <img
                 src="/modern-printing-press-facility-in-gujranwala.png"
                 alt="Fancy Printing Press facility"
@@ -84,9 +84,9 @@ export default function AboutPage() {
       </section>
 
       {/* Our Values */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-16 md:py-20 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <h2 className="font-sans font-bold text-3xl md:text-4xl text-primary mb-4">Our Values</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               The principles that guide everything we do and define who we are as a company.
@@ -110,9 +110,9 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20">
+      <section className="py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 md:mb-16">
             <h2 className="font-sans font-bold text-3xl md:text-4xl text-primary mb-4">Meet Our Team</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               The experienced professionals behind Fancy Printing Press, dedicated to delivering exceptional results.
