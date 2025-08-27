@@ -17,7 +17,7 @@ const manrope = Manrope({
 // --- THIS METADATA OBJECT IS NOW UPDATED ---
 export const metadata: Metadata = {
   // This line fixes the warning by setting the base URL for your site
-  metadataBase: new URL("https://fancy-printing-press.vercel.app"), // IMPORTANT: Change this if you use a custom domain later
+  metadataBase: new URL("https://abdulwahabsaim.site"),  // IMPORTANT: Change this if you use a custom domain later
 
   title: "Fancy Printing Press - Quality Printing, Professional Results",
   description: "Premium printing services in Gujranwala. From business cards to large-format banners, we are your trusted printing partner.",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Fancy Printing Press | Gujranwala",
     description: "Your trusted partner for premium printing solutions for over 20 years.",
-    url: "https://www.abdulwahabsaim.site ",
+    // The 'url' property is no longer needed here because metadataBase is set
     siteName: "Fancy Printing Press",
     images: [
       {
