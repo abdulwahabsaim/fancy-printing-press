@@ -5,6 +5,12 @@ import Link from "next/link"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import WhatsAppFloat from "@/components/whatsapp-float"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "About Us | Fancy Printing Press",
+  description: "Learn about the 20-year history, values, and expert team behind Fancy Printing Press, Gujranwala's trusted printing partner.",
+};
 
 export default function AboutPage() {
   const values = [
@@ -161,7 +167,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
 
       <Footer />
       <WhatsAppFloat />

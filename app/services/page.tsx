@@ -6,7 +6,13 @@ import { Stamp, MessageSquare, CheckCircle } from "lucide-react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import WhatsAppFloat from "@/components/whatsapp-float";
-import { services } from "@/lib/data"; // Import the centralized service data
+import { services } from "@/lib/data";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Services | Fancy Printing Press",
+  description: "Explore the wide range of professional printing services offered by Fancy Printing Press in Gujranwala, including business cards, banners, book printing, rubber stamps, and more.",
+};
 
 export default function ServicesPage() {
   return (
@@ -141,7 +147,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-
 
       <Footer />
       <WhatsAppFloat />

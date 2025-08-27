@@ -8,6 +8,7 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 import WhatsAppFloat from "@/components/whatsapp-float"
 import { services } from "@/lib/data"
+import type { Metadata } from "next"
 
 // This function tells Next.js which pages to build
 export async function generateStaticParams() {
@@ -21,6 +22,24 @@ function getServiceData(slug: string) {
   const service = services.find((s) => s.slug === slug)
   return service
 }
+
+// This function dynamically generates SEO metadata for each service page
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const service = getServiceData(params.slug);
+
+  if (!service) {
+    return {
+      title: "Service Not Found",
+      description: "The requested printing service could not be found.",
+    };
+  }
+
+  return {
+    title: `${service.title} | Fancy Printing Press`,
+    description: service.longDescription,
+  };
+}
+
 
 export default function ServiceDetailPage({ params }: { params: { slug: string } }) {
   const service = getServiceData(params.slug)
@@ -90,8 +109,7 @@ export default function ServiceDetailPage({ params }: { params: { slug: string }
                   {/* Hover Overlay with Service Type */}
                   <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
                     <div className="text-center text-white">
-                      <div className="text-lg font-bold">View Details</div>
-                      <div className="text-xs opacity-90">Click to learn more</div>
+                      <div className="text-lg font-bold">Get a Quote</div>
                     </div>
                   </div>
                 </div>
