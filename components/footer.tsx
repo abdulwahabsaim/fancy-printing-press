@@ -4,10 +4,10 @@ import { Button } from "./ui/button";
 
 export default function Footer() {
   const services = [
-    { name: "Business & ID Cards", href: "/services/business-cards" },
-    { name: "Wedding Cards", href: "/services/greeting-cards" },
-    { name: "Banners & Displays", href: "/services/banners" },
-    { name: "Book & Thesis Printing", href: "/services/book-printing" },
+    { name: "Business & ID Cards", href: "/services/business-id-cards" },
+    { name: "Wedding Cards", href: "/services/greeting-wedding-cards" },
+    { name: "Banners & Displays", href: "/services/banners-displays" },
+    { name: "Book & Thesis Printing", href: "/services/book-thesis-printing" },
     { name: "Rubber Stamps", href: "/services/rubber-stamps" },
   ];
 
