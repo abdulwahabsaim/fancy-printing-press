@@ -5,7 +5,8 @@ import { GeistSans } from "geist/font/sans";
 import { Manrope } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { Analytics } from "@vercel/analytics/react"; // --- 1. ADD THIS IMPORT LINE ---
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next"; 
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -54,7 +55,8 @@ export default function RootLayout({
     <html lang="en" className={`${GeistSans.variable} ${manrope.variable}`} suppressHydrationWarning>
       <body>
         {children}
-        <Analytics /> {/* --- 2. ADD THIS COMPONENT LINE --- */}
+        <Analytics />
+        <SpeedInsights /> 
       </body>
     </html>
   );
