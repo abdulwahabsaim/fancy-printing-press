@@ -3,29 +3,29 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    /* The Original, Polished Color Palette */
-    --background: 255 100% 100%;
-    --foreground: 221 14% 28%; /* #374151 */
-    --card: 255 100% 100%;
-    --card-foreground: 210 100% 20%; /* #003366 */
-    --popover: 255 100% 100%;
-    --popover-foreground: 210 100% 20%;
-    --primary: 210 100% 20%; /* #003366 */
-    --primary-foreground: 255 100% 100%;
-    --secondary: 186 100% 42%; /* #00BCD4 */
-    --secondary-foreground: 255 100% 100%;
-    --muted: 220 18% 95%; /* #f0f4f8 */
-    --muted-foreground: 221 14% 28%;
-    --accent: 14 100% 57%; /* #ff5722 */
-    --accent-foreground: 255 100% 100%;
-    --destructive: 0 91% 63%; /* #ff5252 */
-    --destructive-foreground: 255 100% 100%;
-    --border: 215 20% 82%; /* #d1d5db */
-    --input: 220 18% 95%;
-    --ring: 186 100% 42%;
-    --radius: 0.5rem;
-  }
+  /* PALETTE 7: Classic & Academic (Oxford Blue, Ivory & Crimson Red) */
+:root {
+  --background: 48 33% 96%;        /* Soft Ivory */
+  --foreground: 217 33% 20%;       /* Dark Oxford Blue */
+  --card: 255 100% 100%;             /* White */
+  --card-foreground: 217 33% 20%;  /* Dark Oxford Blue */
+  --popover: 255 100% 100%;
+  --popover-foreground: 217 33% 20%;
+  --primary: 217 33% 25%;           /* Oxford Blue (for headers) */
+  --primary-foreground: 255 100% 100%;
+  --secondary: 210 20% 70%;        /* Muted Blue-Gray (for highlights) */
+  --secondary-foreground: 217 33% 20%;
+  --muted: 210 30% 95%;             /* Light Blue-Gray */
+  --muted-foreground: 217 15% 50%;
+  --accent: 345 75% 45%;            /* Deep Crimson Red (for CTAs) */
+  --accent-foreground: 255 100% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 210 20% 88%;
+  --input: 210 20% 88%;
+  --ring: 345 75% 45%;              /* Ring color matches accent */
+  --radius: 0.5rem;
+}
 }
 
 @layer base {
