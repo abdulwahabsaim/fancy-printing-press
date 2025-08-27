@@ -1,12 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Star, CheckCircle, MessageSquare, BookOpen } from "lucide-react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import WhatsAppFloat from "@/components/whatsapp-float";
 import { services } from "@/lib/data";
+import { images } from "@/lib/image-paths"; // Import the centralized image paths
 
 export default function HomePage() {
   const benefits = [
@@ -19,7 +19,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-background">
       <Header />
       <main>
-        {/* Hero Section - 70% screen height */}
+        {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-primary via-primary/90 to-primary/80 text-primary-foreground min-h-[70vh] flex items-center py-12 lg:py-16">
           <div className="absolute inset-0 bg-black/10"></div>
           <div className="absolute inset-0 opacity-10">
@@ -29,7 +29,6 @@ export default function HomePage() {
           <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div className="text-center lg:text-left space-y-4">
-                {/* "20+ Years..." badge */}
                 <div className="inline-flex items-center px-3 py-1.5 bg-secondary/20 backdrop-blur-sm rounded-full text-secondary font-medium text-sm mb-2">
                   <Star className="w-3 h-3 mr-1.5" />
                   20+ Years of Excellence in Printing
@@ -56,7 +55,6 @@ export default function HomePage() {
                     </Link>
                   </Button>
                 </div>
-                {/* Stats section */}
                 <div className="grid grid-cols-3 gap-4 pt-4 border-t border-primary-foreground/20">
                   <div className="text-center lg:text-left">
                     <div className="text-xl md:text-2xl font-bold text-secondary">20+</div>
@@ -74,9 +72,8 @@ export default function HomePage() {
               </div>
               <div className="relative mt-8 lg:mt-0">
                 <div className="relative z-10">
-                  <Image src="/professional-printing-showcase-with-business-cards.png" alt="Professional Printing Showcase" width={600} height={450} className="w-full h-auto max-h-[280px] sm:max-h-[350px] object-cover rounded-2xl shadow-2xl" priority />
+                  <Image src={images.homeHero} alt="Professional Printing Showcase" width={600} height={450} className="w-full h-auto max-h-[280px] sm:max-h-[350px] object-cover rounded-2xl shadow-2xl" priority />
                 </div>
-                {/* Floating visual elements - positioned outside the image with higher z-index */}
                 <div className="absolute -top-2 -right-2 md:-top-3 md:-right-3 w-20 h-20 bg-secondary/20 backdrop-blur-sm rounded-2xl flex items-center justify-center shadow-lg z-20">
                   <CheckCircle className="w-10 h-10 text-secondary" />
                 </div>
@@ -91,7 +88,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Modern Services Section */}
+        {/* Services Section */}
         <section id="services" className="py-16 md:py-20 bg-gradient-to-b from-muted/30 to-background">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 md:mb-16">
@@ -101,7 +98,6 @@ export default function HomePage() {
               </p>
             </div>
             
-            {/* Featured Services Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 md:mb-16">
               {services.slice(0, 2).map((service) => (
                 <div key={service.slug} className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary/5 to-secondary/5 border border-border/20 hover:border-primary/30 transition-all duration-500 hover:shadow-2xl">
@@ -138,7 +134,6 @@ export default function HomePage() {
               ))}
             </div>
 
-            {/* Compact Services Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {services.slice(2, 6).map((service) => (
                 <div key={service.slug} className="group text-center p-6 rounded-2xl bg-card border-2 border-border/30 hover:border-primary/50 hover:bg-card/80 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
@@ -155,19 +150,11 @@ export default function HomePage() {
             </div>
 
             <div className="text-center mt-12 md:mt-16">
-              <div className="inline-flex flex-col items-center">
-                <Button size="lg" asChild className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-white text-lg px-12 py-6 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-0">
-                  <Link href="/services" className="flex items-center">
-                    <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                    View All Services
-                    <svg className="w-6 h-6 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
-                    </svg>
-                  </Link>
-                </Button>
-              </div>
+              <Button size="lg" asChild className="bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary text-white text-lg px-8 py-3 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 border-0">
+                <Link href="/services">
+                  View All Services
+                </Link>
+              </Button>
             </div>
           </div>
         </section>
@@ -206,31 +193,14 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                {
-                  name: "Ahmed Khan",
-                  company: "Khan Enterprises",
-                  text: "FPP delivered exceptional quality business cards that perfectly represent our brand. Fast delivery and professional service!",
-                  rating: 5
-                },
-                {
-                  name: "Fatima Ali",
-                  company: "Design Studio",
-                  text: "The wedding cards they printed for us were absolutely stunning. Every detail was perfect and the quality exceeded our expectations.",
-                  rating: 5
-                },
-                {
-                  name: "Muhammad Hassan",
-                  company: "Tech Solutions",
-                  text: "Professional service from start to finish. Our company brochures look amazing and the turnaround time was impressive.",
-                  rating: 5
-                }
+                { name: "Ahmed Khan", company: "Khan Enterprises", text: "FPP delivered exceptional quality business cards that perfectly represent our brand. Fast delivery and professional service!", rating: 5 },
+                { name: "Fatima Ali", company: "Design Studio", text: "The wedding cards they printed for us were absolutely stunning. Every detail was perfect and the quality exceeded our expectations.", rating: 5 },
+                { name: "Muhammad Hassan", company: "Tech Solutions", text: "Professional service from start to finish. Our company brochures look amazing and the turnaround time was impressive.", rating: 5 }
               ].map((testimonial, index) => (
                 <div key={index} className="group p-6 rounded-3xl bg-card border-2 border-border/20 hover:border-primary/40 hover:bg-card/80 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl">
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
+                      <svg key={i} className="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                     ))}
                   </div>
                   <p className="text-muted-foreground text-base leading-relaxed mb-6 italic">"{testimonial.text}"</p>
@@ -248,7 +218,6 @@ export default function HomePage() {
             </div>
           </div>
         </section>
-
       </main>
       <Footer />
       <WhatsAppFloat />
