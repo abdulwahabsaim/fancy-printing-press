@@ -26,20 +26,23 @@ export function ServiceModal({ service, children }: ServiceModalProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      <DialogContent className="sm:max-w-[425px] md:max-w-2xl lg:max-w-4xl max-h-[90vh]">
+      {/* --- ADDED a class for better mobile width --- */}
+      <DialogContent className="sm:max-w-lg md:max-w-2xl lg:max-w-4xl max-h-[90vh] w-[95vw] rounded-lg">
         <DialogHeader>
-          <div className="flex items-center gap-4 mb-4">
+          <div className="flex items-center gap-4 mb-2">
             <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
               <Icon name={service.icon} className="w-6 h-6 text-primary" />
             </div>
             <div>
-              <DialogTitle className="text-2xl font-sans font-bold text-primary">{service.title}</DialogTitle>
-              <DialogDescription>{service.longDescription}</DialogDescription>
+              {/* --- Reduced text size on mobile for a cleaner look --- */}
+              <DialogTitle className="text-xl sm:text-2xl font-sans font-bold text-primary text-left">{service.title}</DialogTitle>
+              <DialogDescription className="text-left">{service.longDescription}</DialogDescription>
             </div>
           </div>
         </DialogHeader>
         <ScrollArea className="max-h-[65vh] pr-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-4">
+          {/* --- THIS IS THE KEY CHANGE for the mobile layout --- */}
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 py-4">
             {service.subServices.map((sub, index) => (
               <div key={index} className="flex flex-col rounded-lg border bg-card overflow-hidden">
                 <div className="relative aspect-video">
@@ -52,10 +55,10 @@ export function ServiceModal({ service, children }: ServiceModalProps) {
                     blurDataURL={sub.image}
                   />
                 </div>
-                <div className="p-4 flex flex-col flex-grow">
-                  <h4 className="font-semibold mb-2 text-card-foreground">{sub.title}</h4>
-                  <p className="text-sm text-muted-foreground mb-4 flex-grow">{sub.description}</p>
-                  <Button asChild size="sm" className="w-full mt-auto bg-primary text-primary-foreground hover:bg-primary/90">
+                <div className="p-3 sm:p-4 flex flex-col flex-grow">
+                  <h4 className="font-semibold mb-2 text-card-foreground text-sm sm:text-base">{sub.title}</h4>
+                  <p className="text-xs sm:text-sm text-muted-foreground mb-3 flex-grow">{sub.description}</p>
+                  <Button asChild size="sm" className="w-full mt-auto bg-primary text-primary-foreground hover:bg-primary/90 text-xs sm:text-sm">
                     <Link
                       href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NADEEM}?text=Hello%20FPP,%20I'm%20interested%20in%20the%20${sub.title}%20service.`}
                     >
