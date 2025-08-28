@@ -1,16 +1,9 @@
-import {
-  CreditCard,
-  Heart,
-  Newspaper,
-  Presentation,
-  BookOpen,
-  Stamp,
-  FileText,
-  Box,
-  LucideIcon,
-} from "lucide-react";
-import { images } from "./image-paths"; // This now imports the local paths
+// FILE: lib/data.ts
+import { images } from "./image-paths";
 
+// The icon component imports have been removed from this file.
+
+// The 'icon' property is now a string, not a LucideIcon type.
 export type SubService = {
   title: string;
   description: string;
@@ -22,7 +15,7 @@ export type Service = {
   title: string;
   shortDescription: string;
   longDescription: string;
-  icon: LucideIcon;
+  icon: string; // The type is now 'string'
   image: string;
   subServices: SubService[];
 };
@@ -31,7 +24,7 @@ export const services: Service[] = [
   {
     slug: "business-id-cards",
     title: "Business & ID Cards",
-    icon: CreditCard,
+    icon: "CreditCard", // The icon is now a string name
     shortDescription: "Professional business cards and durable PVC ID cards for your brand.",
     longDescription: "Make a lasting first impression with our premium business cards and secure, high-quality PVC ID cards. We offer both high-volume offset printing and flexible digital options.",
     image: images.businessCards,
@@ -56,7 +49,7 @@ export const services: Service[] = [
   {
     slug: "greeting-wedding-cards",
     title: "Greeting & Wedding Cards",
-    icon: Heart,
+    icon: "Heart", // The icon is now a string name
     shortDescription: "Elegant and custom-designed cards for weddings and all special occasions.",
     longDescription: "Celebrate life's most important moments with beautifully crafted greeting and wedding cards. Our design and printing services ensure your invitations are as special as the day itself.",
     image: images.greetingCards,
@@ -76,7 +69,7 @@ export const services: Service[] = [
   {
     slug: "marketing-materials",
     title: "Marketing Materials",
-    icon: Newspaper,
+    icon: "Newspaper", // The icon is now a string name
     shortDescription: "High-impact flyers, posters, and stickers to effectively promote your business.",
     longDescription: "From promotional flyers to eye-catching posters and versatile stickers, we provide all the materials you need to market your brand effectively. Available in both digital and offset print options.",
     image: images.marketing,
@@ -116,7 +109,7 @@ export const services: Service[] = [
   {
     slug: "banners-displays",
     title: "Banners & Displays",
-    icon: Presentation,
+    icon: "Presentation", // The icon is now a string name
     shortDescription: "Durable flex banners, roll-up stands, and display accessories for maximum visibility.",
     longDescription: "From storefronts to trade shows, our banners and displays are designed to make a big impact. We offer durable materials and a range of hardware to create professional and portable advertising solutions.",
     image: images.banners,
@@ -146,7 +139,7 @@ export const services: Service[] = [
   {
     slug: "book-thesis-printing",
     title: "Book & Thesis Printing",
-    icon: BookOpen,
+    icon: "BookOpen", // The icon is now a string name
     shortDescription: "Comprehensive book printing, binding, and thesis services for authors and students.",
     longDescription: "We provide a complete range of book and document services, from hardcover thesis binding to booklet printing. Our various binding methods ensure a professional finish for any project.",
     image: images.bookPrinting,
@@ -181,7 +174,7 @@ export const services: Service[] = [
   {
     slug: "rubber-stamps",
     title: "Rubber Stamps",
-    icon: Stamp,
+    icon: "Stamp", // The icon is now a string name
     shortDescription: "High-quality, self-inking Shinny stamps and personal seals for all your office needs.",
     longDescription: "Streamline your office workflow with our reliable and clear-impression rubber stamps. We are proud suppliers of the Shinny brand, known for its durability and ease of use. Perfect for official documents and branding.",
     image: images.rubberStamps,
@@ -221,7 +214,7 @@ export const services: Service[] = [
   {
     slug: "office-stationery",
     title: "Office Stationery",
-    icon: FileText,
+    icon: "FileText", // The icon is now a string name
     shortDescription: "Custom letterheads to elevate your brand's professionalism.",
     longDescription: "Maintain a consistent and professional brand image with our custom office stationery. We offer high-quality printing for letterheads, available in both digital and offset options to suit your needs.",
     image: images.stationery,
@@ -241,7 +234,7 @@ export const services: Service[] = [
   {
     slug: "specialty-items",
     title: "Specialty & Promotional",
-    icon: Box,
+    icon: "Box", // The icon is now a string name
     shortDescription: "Custom-printed mugs and eco-friendly bags for memorable branding.",
     longDescription: "Expand your brand's reach with high-quality promotional items. From magic heat-reveal mugs to eco-friendly non-woven bags, we provide memorable products for your marketing campaigns or as personal gifts.",
     image: images.specialty,
