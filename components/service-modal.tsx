@@ -26,7 +26,6 @@ export function ServiceModal({ service, children }: ServiceModalProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>{children}</DialogTrigger>
-      {/* --- ADDED a class for better mobile width --- */}
       <DialogContent className="sm:max-w-lg md:max-w-2xl lg:max-w-4xl max-h-[90vh] w-[95vw] rounded-lg">
         <DialogHeader>
           <div className="flex items-center gap-4 mb-2">
@@ -34,15 +33,14 @@ export function ServiceModal({ service, children }: ServiceModalProps) {
               <Icon name={service.icon} className="w-6 h-6 text-primary" />
             </div>
             <div>
-              {/* --- Reduced text size on mobile for a cleaner look --- */}
               <DialogTitle className="text-xl sm:text-2xl font-sans font-bold text-primary text-left">{service.title}</DialogTitle>
               <DialogDescription className="text-left">{service.longDescription}</DialogDescription>
             </div>
           </div>
         </DialogHeader>
         <ScrollArea className="max-h-[65vh] pr-4">
-          {/* --- THIS IS THE KEY CHANGE for the mobile layout --- */}
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 py-4">
+          {/* --- THIS LINE IS NOW REVERTED TO THE OLD LAYOUT --- */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-4">
             {service.subServices.map((sub, index) => (
               <div key={index} className="flex flex-col rounded-lg border bg-card overflow-hidden">
                 <div className="relative aspect-video">
