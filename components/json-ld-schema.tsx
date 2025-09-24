@@ -9,48 +9,36 @@ export function JsonLdSchema() {
     "name": "Fancy Printing Press",
     "description": "Your trusted partner for premium printing solutions for over 20 years in Gujranwala. We offer business cards, banners, book printing, and more.",
     "url": "https://abdulwahabsaim.site",
+    // --- ADDED A DIRECT LINK TO YOUR LOGO FOR GOOGLE ---
+    "logo": "https://abdulwahabsaim.site/logo.png",
     "telephone": "+923006484741",
+    "founder": [
+      { "@type": "Person", "name": "M Nadeem Ahmed" },
+      { "@type": "Person", "name": "Tahir Mehboob" }
+    ],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Bank More Near TCS Office",
       "addressLocality": "Gujranwala",
       "addressRegion": "Punjab",
-      "postalCode": "52250", // Standard Gujranwala Cantt postal code
+      "postalCode": "52250",
       "addressCountry": "PK"
     },
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-        ],
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
         "opens": "09:00",
         "closes": "19:00"
       }
     ],
-    "image": "https://abdulwahabsaim.site/opengraph-image", // Points to your OG image
+    "image": "https://abdulwahabsaim.site/opengraph-image",
     "priceRange": "$$",
     "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "telephone": "+923006484741",
-          "contactType": "Customer Service",
-          "contactOption": "TollFree",
-          "areaServed": "PK"
-        },
-        {
-          "@type": "ContactPoint",
-          "telephone": "+923041568682",
-          "contactType": "Technical Support",
-          "contactOption": "TollFree",
-          "areaServed": "PK"
-        }
-      ]
+        { "@type": "ContactPoint", "telephone": "+923006484741", "contactType": "Customer Service" },
+        { "@type": "ContactPoint", "telephone": "+923216474183", "contactType": "Customer Service" },
+        { "@type": "ContactPoint", "telephone": "+923041568682", "contactType": "Technical Support" }
+    ]
   };
 
   return (

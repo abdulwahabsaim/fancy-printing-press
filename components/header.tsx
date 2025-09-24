@@ -1,6 +1,8 @@
+// FILE: components/header.tsx
 "use client";
 
 import Link from "next/link";
+import Image from "next/image"; // <-- IMPORT Image component
 import { Menu, MessageSquare, Home, LayoutGrid, Info, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
@@ -20,10 +22,16 @@ export default function Header() {
       className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 shadow-md backdrop-blur supports-[backdrop-filter]:bg-background/60"
     >
       <div className="container flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/#home" className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">FPP</span>
-          </div>
+        <Link href="/#home" className="flex items-center space-x-3">
+          {/* --- LOGO REPLACEMENT --- */}
+          <Image
+            src="/logo.png" // This points to public/logo.png
+            alt="Fancy Printing Press Logo"
+            width={40}
+            height={40}
+            className="h-8 w-auto" // Control the display size here
+          />
+          {/* --- END LOGO REPLACEMENT --- */}
           <span className="hidden font-bold sm:inline-block font-sans text-xl text-primary">
             Fancy Printing Press
           </span>
@@ -60,10 +68,16 @@ export default function Header() {
             <SheetContent side="left" className="w-[300px] p-4 flex flex-col bg-background">
               <div className="p-2">
                 <SheetClose asChild>
-                  <Link href="/#home" className="flex items-center space-x-2 mb-6">
-                    <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                      <span className="text-primary-foreground font-bold text-sm">FPP</span>
-                    </div>
+                  <Link href="/#home" className="flex items-center space-x-3 mb-6">
+                     {/* --- LOGO REPLACEMENT (Mobile Menu) --- */}
+                    <Image
+                        src="/logo.png"
+                        alt="Fancy Printing Press Logo"
+                        width={32}
+                        height={32}
+                        className="h-8 w-auto"
+                    />
+                     {/* --- END LOGO REPLACEMENT --- */}
                     <span className="font-bold font-sans text-xl text-primary">Fancy Printing Press</span>
                   </Link>
                 </SheetClose>

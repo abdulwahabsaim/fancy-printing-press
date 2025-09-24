@@ -200,10 +200,15 @@ export const services: Service[] = [
         image: images.stampE916,
       },
       {
-        title: "Shinny H-6109",
-        description: "A robust stamp ideal for official seals and larger graphics.",
-        image: images.stampH6109,
+        title: "Round Stamp",
+        description: "Classic round stamps perfect for company logos, monograms, or official seals.",
+        image: images.roundStamp, // Use the new image path
       },
+      // {
+      //   title: "Shinny H-6109",
+      //   description: "A robust stamp ideal for official seals and larger graphics.",
+      //   image: images.stampH6109,
+      // },
       {
         title: "Personal Seal Stamp",
         description: "Custom-made personal and company seals for official documentation.",

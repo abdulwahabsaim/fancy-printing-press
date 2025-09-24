@@ -4,7 +4,8 @@
 
 export const images = {
     // Static pages
-    homeHero: '/professional-printing-showcase-with-business-cards.png',
+    // homeHero: '/professional-printing-showcase-with-business-cards.png',
+    homeHero: '/2.jpeg',
     aboutFacility: '/modern-printing-press-facility-in-gujranwala.png',
   
     // Services main images
@@ -48,6 +49,7 @@ export const images = {
     stampS844: '/shinny-s844-printer-stamp.png',
     stampE916: '/shinny-e916-stamp.png',
     stampH6109: '/shinny-h6109-stamp.png',
+    roundStamp: '/round-stamp.jpeg',
     personalSeal: '/personal-seal-embosser-stamp.png',
     
     letterheadDigital: '/letterhead-digital-printing.png',

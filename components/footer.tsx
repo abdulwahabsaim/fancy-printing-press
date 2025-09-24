@@ -1,6 +1,7 @@
 // FILE: components/footer.tsx
 
 import Link from "next/link";
+import Image from "next/image"; // <-- IMPORT Image component
 import { Phone, MapPin, MessageSquare } from "lucide-react";
 import { Button } from "./ui/button";
 
@@ -27,10 +28,16 @@ export default function Footer() {
 
         <div className="py-12 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
           <div className="space-y-4">
-             <Link href="/#home" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-background rounded-lg flex items-center justify-center">
-                <span className="text-primary font-bold text-sm">FPP</span>
-              </div>
+             <Link href="/#home" className="flex items-center space-x-3">
+              {/* --- LOGO REPLACEMENT --- */}
+              <Image
+                src="/logo.png" // This points to public/logo.png
+                alt="Fancy Printing Press Logo"
+                width={40}
+                height={40}
+                className="h-9 w-auto" // Control the display size here
+              />
+              {/* --- END LOGO REPLACEMENT --- */}
               <span className="font-sans font-bold text-xl text-white">Fancy Printing Press</span>
             </Link>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">

@@ -1,23 +1,21 @@
-export const runtime = 'edge'
 // FILE: app/opengraph-image.tsx
 
-import { ImageResponse } from 'next/og'
+import { ImageResponse } from 'next/og';
 
-// Route segment config
+export const runtime = 'edge';
 
-// Image metadata
-export const alt = 'Fancy Printing Press'
-export const size = {
-  width: 1200,
-  height: 630,
-}
-export const contentType = 'image/png'
+export const alt = 'Fancy Printing Press';
+export const size = { width: 1200, height: 630 };
+export const contentType = 'image/png';
 
-// Image generation
 export default async function Image() {
   const geistBold = fetch(
     new URL('../public/fonts/Geist-Bold.otf', import.meta.url)
-  ).then((res) => res.arrayBuffer())
+  ).then((res) => res.arrayBuffer());
+
+  // --- FETCH THE NEW LOGO IMAGE ---
+  const logoUrl = new URL('../public/logo.png', import.meta.url); // It will fetch public/logo.png
+  const logoData = await fetch(logoUrl).then((res) => res.arrayBuffer());
 
   return new ImageResponse(
     (
@@ -29,41 +27,30 @@ export default async function Image() {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          backgroundColor: '#384466', // Palette 7: Oxford Blue
-          color: '#F5F3F0', // Palette 7: Soft Ivory
+          backgroundColor: '#0A2540', // Your primary blue
+          color: '#F5F3F0',         // Your soft ivory
           fontFamily: '"Geist"',
-          padding: '40px',
+          padding: '60px',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          {/* FPP Logo Box */}
-          <div
-            style={{
-              width: '100px',
-              height: '100px',
-              backgroundColor: '#F5F3F0', // Soft Ivory background
-              borderRadius: '12px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              fontSize: '48px',
-              fontWeight: 'bold',
-              color: '#384466', // Oxford Blue text
-              marginRight: '30px',
-            }}
-          >
-            FPP
-          </div>
-          {/* Text Content */}
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <h1 style={{ fontSize: '60px', fontWeight: 'bold', margin: 0 }}>
-              Fancy Printing Press
-            </h1>
-            <p style={{ fontSize: '30px', margin: '10px 0 0 0', color: '#D9D3CC' }}> {/* Muted Ivory/Gray for subheading */}
-              Quality Printing, Professional Results
-            </p>
-          </div>
-        </div>
+        {/* --- DISPLAY THE LOGO IMAGE --- */}
+        <img
+          // @ts-ignore
+          src={logoData}
+          alt="Fancy Printing Press Logo"
+          style={{
+            width: '150px',
+            height: '150px',
+            objectFit: 'contain',
+            marginBottom: '40px',
+          }}
+        />
+        <h1 style={{ fontSize: '72px', fontWeight: 'bold', margin: 0, lineHeight: 1.1, textAlign: 'center', color: 'white' }}>
+          Fancy Printing Press
+        </h1>
+        <p style={{ fontSize: '36px', margin: '20px 0 0 0', color: '#BCCCDC', textAlign: 'center' }}>
+          Quality Printing, Professional Results
+        </p>
       </div>
     ),
     {
@@ -77,5 +64,5 @@ export default async function Image() {
         },
       ],
     }
-  )
+  );
 }

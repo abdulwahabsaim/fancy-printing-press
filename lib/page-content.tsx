@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Users, MessageSquare, MapPin, CheckCircle, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -11,6 +12,8 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
+// --- "WHY CHOOSE US" SECTION ---
+// This section remains unchanged but is included for completeness.
 export function AboutSection() {
   const coreValues = [
     { icon: Star, title: "20+ Years of Experience", description: "Leveraging decades of expertise to deliver exceptional quality and reliability." },
@@ -67,59 +70,70 @@ export function AboutSection() {
   );
 }
 
+// --- UPDATED "GET IN TOUCH" SECTION with Tahir Mehboob ---
 export function ContactSection() {
   return (
     <section id="contact" className="py-16 md:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto bg-gradient-to-br from-primary to-primary/80 text-primary-foreground rounded-xl p-8 md:p-12 shadow-xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <h2 className="font-sans font-bold text-3xl md:text-4xl text-white mb-4">
-                Ready to Start Your Project?
-              </h2>
-              <p className="text-lg text-primary-foreground/80">
-                Our team is ready to assist you. Contact us today for a free, no-obligation quote and expert advice for all your printing needs.
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 p-4 bg-background/10 rounded-lg">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-background/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Users className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-white">M Nadeem Ahmed</div>
-                    <div className="text-sm text-primary-foreground/70">Founder & Director</div>
-                  </div>
-                </div>
-                <Button asChild className="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white flex-shrink-0 shadow-lg">
-                  <Link href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NADEEM}?text=Hello%20Mr.%20Nadeem,%20I'm%20interested%20in%20your%20services.`}>
-                    <MessageSquare className="w-4 h-4 mr-2" />
-                    WhatsApp
-                  </Link>
-                </Button>
-              </div>
-
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 p-4 bg-background/10 rounded-lg">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-background/20 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Users className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-white">Jazib Ahmad</div>
-                    <div className="text-sm text-primary-foreground/70">Operations Manager</div>
-                  </div>
-                </div>
-                <Button asChild className="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white flex-shrink-0 shadow-lg">
-                  <Link href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_JAZIB}?text=Hello%20Mr.%20Jazib,%20I'm%20interested%20in%20your%20services.`}>
-                    <MessageSquare className="w-4 h-4 mr-2" />
-                    WhatsApp
-                  </Link>
-                </Button>
-              </div>
-            </div>
-          </div>
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="font-sans font-bold text-3xl md:text-4xl lg:text-5xl text-primary mb-4">Meet the Team & Get in Touch</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Ready to start a project? Contact our leadership team directly on WhatsApp.
+          </p>
+        </div>
+        {/* Grid is now 3 columns on large screens to accommodate the new person */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          {/* M Nadeem Ahmed */}
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardContent className="p-6 text-center">
+              <Users className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="font-sans font-semibold text-xl text-card-foreground mb-1">M Nadeem Ahmed</h3>
+              <p className="text-secondary font-medium mb-4">Founder & Director</p>
+              <Button asChild className="w-full bg-green-500 hover:bg-green-600 text-white">
+                <Link href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NADEEM}?text=Hello%20Mr.%20Nadeem,%20I'm%20interested%20in%20your%20services.`}>
+                  <MessageSquare className="w-4 h-4 mr-2" />
+                  Chat on WhatsApp
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
+          
+          {/* Tahir Mehboob (NEW) */}
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardContent className="p-6 text-center">
+              <Users className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="font-sans font-semibold text-xl text-card-foreground mb-1">Tahir Mehboob</h3>
+              <p className="text-secondary font-medium mb-4">Co-Founder</p>
+              <Button asChild className="w-full bg-green-500 hover:bg-green-600 text-white">
+                <Link href="https://wa.me/923216474183?text=Hello%20Mr.%20Tahir,%20I'm%20interested%20in%20your%20services.">
+                  <MessageSquare className="w-4 h-4 mr-2" />
+                  Chat on WhatsApp
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
+          
+          {/* Jazib Ahmad */}
+          <Card className="hover:shadow-lg transition-shadow">
+            <CardContent className="p-6 text-center">
+              <Users className="w-12 h-12 text-primary mx-auto mb-4" />
+              <h3 className="font-sans font-semibold text-xl text-card-foreground mb-1">Jazib Ahmad</h3>
+              <p className="text-secondary font-medium mb-4">Operations Manager</p>
+              <Button asChild className="w-full bg-green-500 hover:bg-green-600 text-white">
+                <Link href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_JAZIB}?text=Hello%20Mr.%20Jazib,%20I'm%20interested%20in%20your%20services.`}>
+                  <MessageSquare className="w-4 h-4 mr-2" />
+                  Chat on WhatsApp
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+        <div className="mt-12 text-center p-6 border rounded-lg max-w-4xl mx-auto">
+           <div className="flex items-center justify-center gap-4 mb-2">
+             <MapPin className="w-5 h-5 text-primary" />
+             <h3 className="font-semibold text-lg">Our Location</h3>
+           </div>
+           <p className="text-muted-foreground">Bank More Near TCS Office, Gujranwala Cantt</p>
         </div>
       </div>
     </section>
