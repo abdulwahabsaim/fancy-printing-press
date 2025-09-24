@@ -22,7 +22,6 @@ export const metadata: Metadata = {
   },
   description: "Your trusted partner for premium printing solutions for over 20 years in Gujranwala. We offer business cards, banners, book printing, custom mugs, and more.",
   
-  // --- UPDATED FAVICON AND MANIFEST METADATA ---
   manifest: '/site.webmanifest',
   icons: {
     icon: [
@@ -31,19 +30,15 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-touch-icon.png',
   },
-  // --- END OF UPDATES ---
   
+  // --- THIS IS THE CRITICAL CHANGE ---
   openGraph: {
     title: "Fancy Printing Press | Gujranwala",
     description: "Your trusted partner for premium printing solutions.",
     url: "https://abdulwahabsaim.site",
     siteName: "Fancy Printing Press",
-    images: [{
-      url: "/opengraph-image",
-      width: 1200,
-      height: 630,
-      alt: "Fancy Printing Press Logo and Tagline",
-    }],
+    // We are now pointing to a static PNG file instead of the dynamic route.
+    images: '/social-card.png', 
     locale: "en_US",
     type: "website",
   },
@@ -52,8 +47,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Fancy Printing Press | Quality Printing in Gujranwala",
     description: "Your trusted partner for premium printing solutions for over 20 years.",
-    images: ["/opengraph-image"],
+    // We also point Twitter to the static PNG file.
+    images: ['/social-card.png'], 
   },
+  // --- END OF THE CRITICAL CHANGE ---
 
   keywords: ["printing press gujranwala", "business cards", "wedding cards", "flex printing", "book binding", "rubber stamps"],
   robots: {
