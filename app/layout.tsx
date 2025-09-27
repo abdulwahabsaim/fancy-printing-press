@@ -15,7 +15,7 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://abdulwahabsaim.site"),
+  metadataBase: new URL("https://fancyprintingpress.com"),
   title: {
     default: "Fancy Printing Press | Quality Printing in Gujranwala",
     template: "%s | Fancy Printing Press",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Fancy Printing Press | Gujranwala",
     description: "Your trusted partner for premium printing solutions.",
-    url: "https://abdulwahabsaim.site",
+    url: "https://fancyprintingpress.com",
     siteName: "Fancy Printing Press",
     // We are now pointing to a static PNG file instead of the dynamic route.
     images: '/social-card.png', 

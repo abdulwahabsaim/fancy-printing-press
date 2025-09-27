@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // but for SEO, we can still list the conceptual "pages".
     // A better approach for single-page SEO is to focus on the main page.
     // For this reason, we will only include the main page sections.
-    url: `https://abdulwahabsaim.site/#services`,
+    url: `https://fancyprintingpress.com/#services`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as 'monthly',
     priority: 0.8,
@@ -19,19 +19,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Since it's a single-page site, we list the main sections
   const staticUrls = [
     {
-      url: 'https://abdulwahabsaim.site',
+      url: 'https://fancyprintingpress.com',
       lastModified: new Date(),
       changeFrequency: 'yearly' as 'yearly',
       priority: 1,
     },
     {
-      url: 'https://abdulwahabsaim.site/#about',
+      url: 'https://fancyprintingpress.com/#about',
       lastModified: new Date(),
       changeFrequency: 'monthly' as 'monthly',
       priority: 0.5,
     },
     {
-      url: 'https://abdulwahabsaim.site/#contact',
+      url: 'https://fancyprintingpress.com/#contact',
       lastModified: new Date(),
       changeFrequency: 'monthly' as 'monthly',
       priority: 0.5,

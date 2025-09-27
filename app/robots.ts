@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://abdulwahabsaim.site/sitemap.xml',
+    sitemap: 'https://fancyprintingpress.com/sitemap.xml',
   }
 }

@@ -8,9 +8,9 @@ export function JsonLdSchema() {
     "@type": "PrintingService",
     "name": "Fancy Printing Press",
     "description": "Your trusted partner for premium printing solutions for over 20 years in Gujranwala. We offer business cards, banners, book printing, and more.",
-    "url": "https://abdulwahabsaim.site",
+    "url": "https://fancyprintingpress.com",
     // --- ADDED A DIRECT LINK TO YOUR LOGO FOR GOOGLE ---
-    "logo": "https://abdulwahabsaim.site/logo.png",
+    "logo": "https://fancyprintingpress.com/logo.png",
     "telephone": "+923006484741",
     "founder": [
       { "@type": "Person", "name": "M Nadeem Ahmed" },
@@ -32,7 +32,7 @@ export function JsonLdSchema() {
         "closes": "19:00"
       }
     ],
-    "image": "https://abdulwahabsaim.site/opengraph-image",
+    "image": "https://fancyprintingpress.com/opengraph-image",
     "priceRange": "$$",
     "contactPoint": [
         { "@type": "ContactPoint", "telephone": "+923006484741", "contactType": "Customer Service" },
