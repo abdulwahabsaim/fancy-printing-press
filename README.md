@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="public/logo.png" alt="Fancy Printing Press Logo" width="100" height="100" />
+  <img src="public/logo.png" alt="Fancy Printing Press Logo" width="110" height="110" />
 
   # 🖨️ Fancy Printing Press
 
@@ -58,8 +58,6 @@ This repository houses the modern web application designed to showcase their ful
 
 ## 🛠️ Tech Stack
 
-<div align="center">
-
 | Area | Technologies |
 |---|---|
 | **Framework** | Next.js 14 (App Router), React 18 |
@@ -71,13 +69,11 @@ This repository houses the modern web application designed to showcase their ful
 | **Carousel & Sliders** | Embla Carousel React |
 | **Analytics & SEO** | Vercel Analytics, Vercel Speed Insights, OpenGraph Edge Engine |
 
-</div>
-
 ---
 
 ## 📂 Directory Structure
 
-```text
+```txt
 abdulwahabsaim-fancy-printing-press/
 ├── app/
 │   ├── globals.css           # Global Tailwind classes, design tokens & theme vars
@@ -102,75 +98,127 @@ abdulwahabsaim-fancy-printing-press/
 │   ├── icons.tsx             # Dynamic Lucide icon mapper
 │   ├── image-paths.ts        # Centralized static image asset paths
 │   ├── page-content.tsx      # About and Team/Contact UI sections
-│   └── utils.ts              # Tailwind CSS class merging helper (`cn`)
+│   └── utils.ts              # Tailwind CSS class merging helper (cn)
 ├── public/                   # Static assets, logos, manifests, favicons
 ├── components.json           # shadcn/ui configuration
 ├── next.config.mjs           # Next.js configuration
 ├── tailwind.config.ts        # Tailwind configuration and keyframes
 └── tsconfig.json             # TypeScript compiler settings
-🚀 Getting Started
+```
+
+---
+
+## 🚀 Getting Started
+
 Follow these instructions to get a local development instance up and running.
-Prerequisites
-Node.js: v18.17.0 or later
-Package Manager: npm, pnpm, yarn, or bun
-Installation
-Clone the repository:
-code
-Bash
-git clone https://github.com/abdulwahabsaim/fancy-printing-press.git
-cd fancy-printing-press
-Install dependencies:
-code
-Bash
-npm install
-# or
-pnpm install
-# or
-yarn install
-Environment Variables
-Create a .env.local file in the root directory and configure the following variables:
-code
-Env
-# Team WhatsApp contact numbers (include country code without '+' or special characters)
+
+### Prerequisites
+
+- **Node.js**: `v18.17.0` or higher
+- **Package Manager**: `npm`, `pnpm`, `yarn`, or `bun`
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/abdulwahabsaim/fancy-printing-press.git
+   cd fancy-printing-press
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   pnpm install
+   # or
+   yarn install
+   ```
+
+### Environment Variables
+
+Create a `.env.local` file in the root directory:
+
+```env
+# Team WhatsApp contact numbers (without '+' or special characters)
 NEXT_PUBLIC_WHATSAPP_NADEEM=923006484741
 NEXT_PUBLIC_WHATSAPP_JAZIB=923041568682
-Running Locally
-Start the development server:
-code
-Bash
+```
+
+### Running Locally
+
+Start the local development server:
+
+```bash
 npm run dev
 # or
 pnpm dev
 # or
 yarn dev
-Open http://localhost:3000 in your browser to view the application.
-📜 Available Scripts
-Command	Description
-npm run dev	Starts the local development server at localhost:3000
-npm run build	Builds the production application with Next.js compiler
-npm run start	Starts the production server
-npm run lint	Runs ESLint to check for code quality and syntax errors
-🌐 SEO & Open Graph
-This application is built with SEO best practices:
-Edge OG Images: Utilizes ImageResponse from next/og on Edge runtime (app/opengraph-image.tsx) to generate dynamic social share preview cards.
-Rich Snippets: Implements JSON-LD (PrintingService) specifying business location, operating hours, contact endpoints, and founders.
-Search Metadata: Configured with canonical links, sitemaps, and robots instructions in the App Router.
-📦 Core Services Showcase
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+---
+
+## 📜 Available Scripts
+
+| Command | Description |
+|---|---|
+| `npm run dev` | Starts local development server at `localhost:3000` |
+| `npm run build` | Builds the production application with Next.js compiler |
+| `npm run start` | Starts the production server |
+| `npm run lint` | Runs ESLint to check code quality and syntax errors |
+
+---
+
+## 🌐 SEO & Open Graph
+
+This application is built with modern SEO standards:
+- **Edge OG Images:** Utilizes `ImageResponse` from `next/og` on Edge runtime (`app/opengraph-image.tsx`) to generate dynamic social share preview cards.
+- **Rich Snippets:** Implements JSON-LD (`PrintingService`) specifying business location, operating hours, contact endpoints, and founders.
+- **Search Metadata:** Configured with canonical links, sitemaps, and robots instructions in the App Router.
+
+---
+
+## 📦 Core Services Showcase
+
 <details>
-<summary>Click to view the supported printing services</summary>
-💳 Business & ID Cards: Digital business cards, offset cards, PVC ID badges.
-💌 Greeting & Wedding Cards: Custom wedding invitations, holiday cards, formal envelopes.
-📢 Marketing Materials: Digital/Offset flyers, event posters, custom die-cut sticker labels, A3 sheets.
-🚩 Banners & Displays: Weather-resistant flex banners, X-Stands, roll-up banners, display accessories.
-📚 Book & Thesis Printing: Hardcover thesis binding, saddle-stitched booklets, tape/press binding.
-🖋️ Rubber Stamps: Self-inking Shinny stamps (S-724, S-824, S-844, E-916), round stamps, personal seals.
-📄 Office Stationery: Customized high-grade digital and offset corporate letterheads.
-🎁 Specialty & Promotional: Magic heat-reveal mugs, standard ceramic mugs, non-woven reusable bags.
+<summary><b>Click to view all supported printing services</b></summary>
+
+<br />
+
+- 💳 **Business & ID Cards:** Digital business cards, offset cards, PVC ID badges.
+- 💌 **Greeting & Wedding Cards:** Custom wedding invitations, holiday cards, formal envelopes.
+- 📢 **Marketing Materials:** Digital/Offset flyers, event posters, custom die-cut sticker labels, A3 sheets.
+- 🚩 **Banners & Displays:** Weather-resistant flex banners, X-Stands, roll-up banners, display accessories.
+- 📚 **Book & Thesis Printing:** Hardcover thesis binding, saddle-stitched booklets, tape/press binding.
+- 🖋️ **Rubber Stamps:** Self-inking Shinny stamps (S-724, S-824, S-844, E-916), round stamps, personal seals.
+- 📄 **Office Stationery:** Customized high-grade digital and offset corporate letterheads.
+- 🎁 **Specialty & Promotional:** Magic heat-reveal mugs, standard ceramic mugs, non-woven reusable bags.
+
 </details>
-🤝 Contributing
+
+---
+
+## 🤝 Contributing
+
 Contributions, issues, and feature requests are welcome!
-Fork the Project (https://github.com/abdulwahabsaim/fancy-printing-press/fork)
-Create your Feature Branch (git checkout -b feature/AmazingFeature)
-Commit your Changes (git commit -m 'Add some AmazingFeature')
-Push to the Branch (git push origin feature/AmazingFeature)
-Open a Pull Request
+
+1. Fork the Project (`https://github.com/abdulwahabsaim/fancy-printing-press/fork`)
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+Distributed under the **MIT License**. See `LICENSE` for more information.
+
+---
+
+
+<div align="center">
+  <sub>Built with ❤️ by <a href="https://github.com/abdulwahabsaim">Abdul Wahab Saim</a></sub>
+</div>
