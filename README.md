@@ -10,7 +10,7 @@
   [![Next.js](https://img.shields.io/badge/Next.js-14.2.4-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
   [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
   [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-  [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+  [![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)](LICENSE)
 
 </div>
 
@@ -214,7 +214,8 @@ Contributions, issues, and feature requests are welcome!
 
 ## 📄 License
 
-Distributed under the **MIT License**. See `LICENSE` for more information.
+This project is **Proprietary & Confidential**. All rights reserved.  
+Unauthorized copying, distribution, or commercial use of this software without prior permission is strictly prohibited. See [`LICENSE`](LICENSE) for full details.
 
 ---
 
